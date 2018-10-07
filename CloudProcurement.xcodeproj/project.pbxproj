@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6915F1562169BA1200797FC0 /* UIDevice+MC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915F1542169BA1200797FC0 /* UIDevice+MC.m */; };
+		6915F1592169D84400797FC0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6915F1582169D84400797FC0 /* Security.framework */; };
+		6915F15F2169E5E900797FC0 /* temp_Lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 6915F15E2169E5E900797FC0 /* temp_Lunch.png */; };
+		6915F1642169EA4F00797FC0 /* YCLoginCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915F1632169EA4F00797FC0 /* YCLoginCtrl.m */; };
 		69F6DC97215F253E00C85550 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DC96215F253E00C85550 /* AppDelegate.m */; };
 		69F6DC9A215F253E00C85550 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DC99215F253E00C85550 /* ViewController.m */; };
 		69F6DC9D215F253E00C85550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F6DC9B215F253E00C85550 /* Main.storyboard */; };
@@ -16,6 +20,20 @@
 		69F6DCA8215F254000C85550 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCA7215F254000C85550 /* main.m */; };
 		69F6DCB2215F254000C85550 /* CloudProcurementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCB1215F254000C85550 /* CloudProcurementTests.m */; };
 		69F6DCBD215F254000C85550 /* CloudProcurementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCBC215F254000C85550 /* CloudProcurementUITests.m */; };
+		69F6DCEE215F653400C85550 /* YCSysCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCCD215F653400C85550 /* YCSysCtrl.m */; };
+		69F6DCEF215F653400C85550 /* NavicationMainCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCCE215F653400C85550 /* NavicationMainCtrl.m */; };
+		69F6DCF0215F653400C85550 /* YCTableBarCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCCF215F653400C85550 /* YCTableBarCtrl.m */; };
+		69F6DCF2215F653400C85550 /* YCUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCD7215F653400C85550 /* YCUserManager.m */; };
+		69F6DCF4215F653400C85550 /* YCListObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCDA215F653400C85550 /* YCListObj.m */; };
+		69F6DCF5215F653400C85550 /* YCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCDB215F653400C85550 /* YCUserInfo.m */; };
+		69F6DCF6215F653400C85550 /* YCUploadFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCE4215F653400C85550 /* YCUploadFileItem.m */; };
+		69F6DCF7215F653400C85550 /* YCHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCE7215F653400C85550 /* YCHttpResponse.m */; };
+		69F6DCF8215F653400C85550 /* YCHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCE8215F653400C85550 /* YCHttpRequest.m */; };
+		69F6DCF9215F653400C85550 /* YCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCED215F653400C85550 /* YCFileManager.m */; };
+		69F6DCFF215F691500C85550 /* YCJSInterationBasicObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DCFE215F691500C85550 /* YCJSInterationBasicObj.m */; };
+		69F6DD02215F6D2500C85550 /* YCWebViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DD01215F6D2500C85550 /* YCWebViewCtrl.m */; };
+		69F6DD06215F84D100C85550 /* NSObject+JSInteration.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DD05215F84D100C85550 /* NSObject+JSInteration.m */; };
+		B4A1301CD719A32AE3353194 /* libPods-CloudProcurement.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3EA4832E3AD8E107B2707C /* libPods-CloudProcurement.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21E0F6102BAE49E3039CE24B /* Pods-CloudProcurement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudProcurement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudProcurement/Pods-CloudProcurement.debug.xcconfig"; sourceTree = "<group>"; };
+		6915F1542169BA1200797FC0 /* UIDevice+MC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+MC.m"; sourceTree = "<group>"; };
+		6915F1552169BA1200797FC0 /* UIDevice+MC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+MC.h"; sourceTree = "<group>"; };
+		6915F1582169D84400797FC0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6915F15E2169E5E900797FC0 /* temp_Lunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = temp_Lunch.png; path = ../../../../../Desktop/temp_Lunch.png; sourceTree = "<group>"; };
+		6915F1622169EA4F00797FC0 /* YCLoginCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCLoginCtrl.h; sourceTree = "<group>"; };
+		6915F1632169EA4F00797FC0 /* YCLoginCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCLoginCtrl.m; sourceTree = "<group>"; };
 		69F6DC92215F253E00C85550 /* CloudProcurement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudProcurement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F6DC95215F253E00C85550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69F6DC96215F253E00C85550 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +78,37 @@
 		69F6DCB8215F254000C85550 /* CloudProcurementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudProcurementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F6DCBC215F254000C85550 /* CloudProcurementUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudProcurementUITests.m; sourceTree = "<group>"; };
 		69F6DCBE215F254000C85550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F6DCCC215F653400C85550 /* YCTableBarCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTableBarCtrl.h; sourceTree = "<group>"; };
+		69F6DCCD215F653400C85550 /* YCSysCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSysCtrl.m; sourceTree = "<group>"; };
+		69F6DCCE215F653400C85550 /* NavicationMainCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavicationMainCtrl.m; sourceTree = "<group>"; };
+		69F6DCCF215F653400C85550 /* YCTableBarCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTableBarCtrl.m; sourceTree = "<group>"; };
+		69F6DCD0215F653400C85550 /* YCSysCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSysCtrl.h; sourceTree = "<group>"; };
+		69F6DCD1215F653400C85550 /* NavicationMainCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavicationMainCtrl.h; sourceTree = "<group>"; };
+		69F6DCD6215F653400C85550 /* YCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCUserInfo.h; sourceTree = "<group>"; };
+		69F6DCD7215F653400C85550 /* YCUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCUserManager.m; sourceTree = "<group>"; };
+		69F6DCD9215F653400C85550 /* YCTypeDefObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTypeDefObj.h; sourceTree = "<group>"; };
+		69F6DCDA215F653400C85550 /* YCListObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCListObj.m; sourceTree = "<group>"; };
+		69F6DCDB215F653400C85550 /* YCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCUserInfo.m; sourceTree = "<group>"; };
+		69F6DCDE215F653400C85550 /* YCUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCUserManager.h; sourceTree = "<group>"; };
+		69F6DCDF215F653400C85550 /* YCListObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCListObj.h; sourceTree = "<group>"; };
+		69F6DCE1215F653400C85550 /* YCNotificationNameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNotificationNameConfig.h; sourceTree = "<group>"; };
+		69F6DCE2215F653400C85550 /* YCPathConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCPathConfig.h; sourceTree = "<group>"; };
+		69F6DCE4215F653400C85550 /* YCUploadFileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCUploadFileItem.m; sourceTree = "<group>"; };
+		69F6DCE5215F653400C85550 /* YCUploadFileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCUploadFileItem.h; sourceTree = "<group>"; };
+		69F6DCE7215F653400C85550 /* YCHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHttpResponse.m; sourceTree = "<group>"; };
+		69F6DCE8215F653400C85550 /* YCHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHttpRequest.m; sourceTree = "<group>"; };
+		69F6DCE9215F653400C85550 /* YCHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCHttpResponse.h; sourceTree = "<group>"; };
+		69F6DCEA215F653400C85550 /* YCHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCHttpRequest.h; sourceTree = "<group>"; };
+		69F6DCEC215F653400C85550 /* YCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCFileManager.h; sourceTree = "<group>"; };
+		69F6DCED215F653400C85550 /* YCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCFileManager.m; sourceTree = "<group>"; };
+		69F6DCFD215F691500C85550 /* YCJSInterationBasicObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCJSInterationBasicObj.h; sourceTree = "<group>"; };
+		69F6DCFE215F691500C85550 /* YCJSInterationBasicObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCJSInterationBasicObj.m; sourceTree = "<group>"; };
+		69F6DD00215F6D2500C85550 /* YCWebViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCWebViewCtrl.h; sourceTree = "<group>"; };
+		69F6DD01215F6D2500C85550 /* YCWebViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCWebViewCtrl.m; sourceTree = "<group>"; };
+		69F6DD04215F84D100C85550 /* NSObject+JSInteration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSInteration.h"; sourceTree = "<group>"; };
+		69F6DD05215F84D100C85550 /* NSObject+JSInteration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSInteration.m"; sourceTree = "<group>"; };
+		9E3EA4832E3AD8E107B2707C /* libPods-CloudProcurement.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloudProcurement.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2B7937CD638E1E5354B6C5 /* Pods-CloudProcurement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudProcurement.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudProcurement/Pods-CloudProcurement.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6915F1592169D84400797FC0 /* Security.framework in Frameworks */,
+				B4A1301CD719A32AE3353194 /* libPods-CloudProcurement.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +138,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6915F1572169CFD900797FC0 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6915F15C2169E4B200797FC0 /* login */,
+				69F6DCCB215F653400C85550 /* basic */,
+				69F6DCD1215F653400C85550 /* NavicationMainCtrl.h */,
+				69F6DCCE215F653400C85550 /* NavicationMainCtrl.m */,
+				69F6DCCC215F653400C85550 /* YCTableBarCtrl.h */,
+				69F6DCCF215F653400C85550 /* YCTableBarCtrl.m */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6915F15C2169E4B200797FC0 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				6915F1622169EA4F00797FC0 /* YCLoginCtrl.h */,
+				6915F1632169EA4F00797FC0 /* YCLoginCtrl.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		6915F15D2169E5C500797FC0 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				6915F15E2169E5E900797FC0 /* temp_Lunch.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		69F6DC89215F253E00C85550 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +175,8 @@
 				69F6DCB0215F254000C85550 /* CloudProcurementTests */,
 				69F6DCBB215F254000C85550 /* CloudProcurementUITests */,
 				69F6DC93215F253E00C85550 /* Products */,
+				DCD2896AB7120943C0F43915 /* Pods */,
+				8D0C479D5857667ACDEEBEDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +193,9 @@
 		69F6DC94215F253E00C85550 /* CloudProcurement */ = {
 			isa = PBXGroup;
 			children = (
+				6915F15D2169E5C500797FC0 /* resource */,
+				69F6DCD2215F653400C85550 /* model */,
+				6915F1572169CFD900797FC0 /* Ctrl */,
 				69F6DC95215F253E00C85550 /* AppDelegate.h */,
 				69F6DC96215F253E00C85550 /* AppDelegate.m */,
 				69F6DC98215F253E00C85550 /* ViewController.h */,
@@ -135,6 +228,121 @@
 			path = CloudProcurementUITests;
 			sourceTree = "<group>";
 		};
+		69F6DCCB215F653400C85550 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				69F6DCD0215F653400C85550 /* YCSysCtrl.h */,
+				69F6DCCD215F653400C85550 /* YCSysCtrl.m */,
+				69F6DCFD215F691500C85550 /* YCJSInterationBasicObj.h */,
+				69F6DCFE215F691500C85550 /* YCJSInterationBasicObj.m */,
+				69F6DD00215F6D2500C85550 /* YCWebViewCtrl.h */,
+				69F6DD01215F6D2500C85550 /* YCWebViewCtrl.m */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		69F6DCD2215F653400C85550 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				69F6DD03215F848D00C85550 /* category */,
+				69F6DCE0215F653400C85550 /* Config */,
+				69F6DCD3215F653400C85550 /* DataBase */,
+				69F6DCEB215F653400C85550 /* FileManager */,
+				69F6DCE3215F653400C85550 /* FileUploadAndDownload */,
+				69F6DCE6215F653400C85550 /* NetworkProtocol */,
+				69F6DCD4215F653400C85550 /* Obj */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		69F6DCD3215F653400C85550 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		69F6DCD4215F653400C85550 /* Obj */ = {
+			isa = PBXGroup;
+			children = (
+				6915F1552169BA1200797FC0 /* UIDevice+MC.h */,
+				6915F1542169BA1200797FC0 /* UIDevice+MC.m */,
+				69F6DCDF215F653400C85550 /* YCListObj.h */,
+				69F6DCDA215F653400C85550 /* YCListObj.m */,
+				69F6DCD9215F653400C85550 /* YCTypeDefObj.h */,
+				69F6DCD6215F653400C85550 /* YCUserInfo.h */,
+				69F6DCDB215F653400C85550 /* YCUserInfo.m */,
+				69F6DCDE215F653400C85550 /* YCUserManager.h */,
+				69F6DCD7215F653400C85550 /* YCUserManager.m */,
+			);
+			path = Obj;
+			sourceTree = "<group>";
+		};
+		69F6DCE0215F653400C85550 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				69F6DCE1215F653400C85550 /* YCNotificationNameConfig.h */,
+				69F6DCE2215F653400C85550 /* YCPathConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		69F6DCE3215F653400C85550 /* FileUploadAndDownload */ = {
+			isa = PBXGroup;
+			children = (
+				69F6DCE5215F653400C85550 /* YCUploadFileItem.h */,
+				69F6DCE4215F653400C85550 /* YCUploadFileItem.m */,
+			);
+			path = FileUploadAndDownload;
+			sourceTree = "<group>";
+		};
+		69F6DCE6215F653400C85550 /* NetworkProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				69F6DCEA215F653400C85550 /* YCHttpRequest.h */,
+				69F6DCE8215F653400C85550 /* YCHttpRequest.m */,
+				69F6DCE9215F653400C85550 /* YCHttpResponse.h */,
+				69F6DCE7215F653400C85550 /* YCHttpResponse.m */,
+			);
+			path = NetworkProtocol;
+			sourceTree = "<group>";
+		};
+		69F6DCEB215F653400C85550 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				69F6DCEC215F653400C85550 /* YCFileManager.h */,
+				69F6DCED215F653400C85550 /* YCFileManager.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		69F6DD03215F848D00C85550 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				69F6DD04215F84D100C85550 /* NSObject+JSInteration.h */,
+				69F6DD05215F84D100C85550 /* NSObject+JSInteration.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		8D0C479D5857667ACDEEBEDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6915F1582169D84400797FC0 /* Security.framework */,
+				9E3EA4832E3AD8E107B2707C /* libPods-CloudProcurement.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCD2896AB7120943C0F43915 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21E0F6102BAE49E3039CE24B /* Pods-CloudProcurement.debug.xcconfig */,
+				CE2B7937CD638E1E5354B6C5 /* Pods-CloudProcurement.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +350,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69F6DCC1215F254000C85550 /* Build configuration list for PBXNativeTarget "CloudProcurement" */;
 			buildPhases = (
+				EBCA0FEBF1CF5F2FD5841382 /* [CP] Check Pods Manifest.lock */,
 				69F6DC8E215F253E00C85550 /* Sources */,
 				69F6DC8F215F253E00C85550 /* Frameworks */,
 				69F6DC90215F253E00C85550 /* Resources */,
+				B94C514A6C9AEE037D481D26 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6915F15F2169E5E900797FC0 /* temp_Lunch.png in Resources */,
 				69F6DCA5215F254000C85550 /* LaunchScreen.storyboard in Resources */,
 				69F6DCA2215F254000C85550 /* Assets.xcassets in Resources */,
 				69F6DC9D215F253E00C85550 /* Main.storyboard in Resources */,
@@ -260,15 +471,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B94C514A6C9AEE037D481D26 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CloudProcurement/Pods-CloudProcurement-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SSKeychain/Support/SSKeychain.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SSKeychain.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudProcurement/Pods-CloudProcurement-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBCA0FEBF1CF5F2FD5841382 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloudProcurement-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		69F6DC8E215F253E00C85550 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F6DCF9215F653400C85550 /* YCFileManager.m in Sources */,
+				69F6DCF8215F653400C85550 /* YCHttpRequest.m in Sources */,
 				69F6DC9A215F253E00C85550 /* ViewController.m in Sources */,
+				69F6DCF4215F653400C85550 /* YCListObj.m in Sources */,
+				69F6DD02215F6D2500C85550 /* YCWebViewCtrl.m in Sources */,
+				69F6DCF2215F653400C85550 /* YCUserManager.m in Sources */,
+				69F6DCF6215F653400C85550 /* YCUploadFileItem.m in Sources */,
+				6915F1642169EA4F00797FC0 /* YCLoginCtrl.m in Sources */,
 				69F6DCA0215F253E00C85550 /* CloudProcurement.xcdatamodeld in Sources */,
+				69F6DCFF215F691500C85550 /* YCJSInterationBasicObj.m in Sources */,
+				6915F1562169BA1200797FC0 /* UIDevice+MC.m in Sources */,
+				69F6DCF5215F653400C85550 /* YCUserInfo.m in Sources */,
+				69F6DCF0215F653400C85550 /* YCTableBarCtrl.m in Sources */,
+				69F6DCEE215F653400C85550 /* YCSysCtrl.m in Sources */,
 				69F6DCA8215F254000C85550 /* main.m in Sources */,
 				69F6DC97215F253E00C85550 /* AppDelegate.m in Sources */,
+				69F6DCF7215F653400C85550 /* YCHttpResponse.m in Sources */,
+				69F6DCEF215F653400C85550 /* NavicationMainCtrl.m in Sources */,
+				69F6DD06215F84D100C85550 /* NSObject+JSInteration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,10 +712,12 @@
 		};
 		69F6DCC2215F254000C85550 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21E0F6102BAE49E3039CE24B /* Pods-CloudProcurement.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9RVBMR5MGX;
+				DEVELOPMENT_TEAM = P9N3WJ98EG;
 				INFOPLIST_FILE = CloudProcurement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,16 +725,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = YC.com.CloudProcurement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		69F6DCC3215F254000C85550 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE2B7937CD638E1E5354B6C5 /* Pods-CloudProcurement.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9RVBMR5MGX;
+				DEVELOPMENT_TEAM = P9N3WJ98EG;
 				INFOPLIST_FILE = CloudProcurement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,6 +745,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = YC.com.CloudProcurement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
