@@ -10,7 +10,7 @@
 #import "YCTypeDefObj.h"
 #import "UIDevice+MC.h"
 #import "UIColor+YCColor.h"
-@interface YCLoginCtrl ()
+@interface YCLoginCtrl ()<UITextFieldDelegate>
 //关闭
 @property (nonatomic, strong) UIImageView *backImageView;
 @property (nonatomic, strong)UIImageView *iconImageView;
@@ -28,6 +28,17 @@
     self.navationbarHidden = YES;
     // Do any additional setup after loading the view.
     [self initUI];
+    [self bindEvent];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChange:) name:UITextFieldTextDidChangeNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)initUI{
@@ -55,7 +66,7 @@
     NSString *placeHolderStr = @"用户名";
     NSMutableAttributedString *phAttrStr = [[NSMutableAttributedString alloc] initWithString:placeHolderStr];
     NSDictionary *tempDic = @{NSFontAttributeName:[UIFont systemFontOfSize:16], NSForegroundColorAttributeName:[UIColor ycDeepGrayColor], NSStrokeColorAttributeName:[UIColor ycDeepGrayColor]};
-    [phAttrStr addAttributes:tempDic range:NSRangeFromString(placeHolderStr)];
+    [phAttrStr addAttributes:tempDic range:NSMakeRange(0, placeHolderStr.length)];
     self.uNTextField.attributedPlaceholder = phAttrStr;
     self.uNTextField.textColor = [UIColor ycDeepGrayColor];
     self.uNTextField.font = [UIFont systemFontOfSize:16];
@@ -86,6 +97,7 @@
     _pwdTextField = pwdTextField;
     pwdTextField.textColor = [UIColor ycDeepGrayColor];
     NSString *tempPwdStr = @"密码";
+    pwdTextField.secureTextEntry = YES;
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:tempPwdStr attributes:tempDic];
     pwdTextField.attributedPlaceholder = attrStr;
     
@@ -118,7 +130,10 @@
     loginBtn.layer.masksToBounds = YES;
     [loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
     [loginBtn setTitleColor:[UIColor ycWhiteColor] forState:UIControlStateNormal];
-    [loginBtn setBackgroundColor:[UIColor colorWithRed:0x7a green:0xe1 blue:0xe3 alpha:1]];
+//    122,225,227
+    UIColor *bgColor = [UIColor colorWithRed:122.f/255 green:225.f/255 blue:227.f/255 alpha:0.5];
+    loginBtn.enabled = false;
+    [loginBtn setBackgroundColor:bgColor];
     [loginBtn autoSetDimension:ALDimensionHeight toSize:40];
     [loginBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:contentView withOffset:30];
     [loginBtn autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:25];
@@ -157,6 +172,40 @@
 }
 
 - (void)bindEvent{
+    self.view.userInteractionEnabled = YES;
+    UITapGestureRecognizer *viewTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenKeyboard)];
+    [self.view addGestureRecognizer:viewTapGes];
     
+    self.forgotPwdTipsLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer *forgotTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickForgotPwdMethod)];
+    [self.forgotPwdTipsLabel addGestureRecognizer:forgotTapGes];
+    
+    self.registTipsLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer *registTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickRegistMethod)];
+    [self.registTipsLabel addGestureRecognizer:registTapGes];
+    
+    self.pwdTextField.delegate = self;
+    self.uNTextField.delegate = self;
+    @weakify(self);
+    [RACObserve(self, loginBtn.enabled) subscribeNext:^(id  _Nullable x) {
+        self_weak_.loginBtn.backgroundColor = ([x boolValue]) ? ([UIColor ycGreen1Color]) : ([UIColor colorWithRed:122.f/255 green:225.f/255 blue:227.f/255 alpha:0.5]);
+    }];
+}
+
+- (void)hiddenKeyboard{
+    [self.pwdTextField resignFirstResponder];
+    [self.uNTextField resignFirstResponder];
+}
+
+- (void)clickRegistMethod{
+    
+}
+
+- (void)clickForgotPwdMethod{
+    
+}
+
+- (void)textFieldChange:(NSNotification *)notification{
+//    NSConcreteNotification 0x600000bbf4e0 {name = UITextFieldTextDidChangeNotification; object = <UITextField: 0x7feb3187cc00; frame = (0 0; 265.5 55); text = 'r'; opaque = NO; gestureRecognizers = <NSArray: 0x600000b44b10>; layer = <CALayer: 0x60000054fe80>>}
 }
 @end
