@@ -43,14 +43,28 @@
 - (void)initUI4Ios12{
     self.wkWebView = [WKWebView newAutoLayoutView];
 }
+- (void)setReqUrlStr:(NSString *)reqUrlStr{
+    _reqUrlStr = reqUrlStr;
+    [self refreshUrl];
+}
+
+- (void)refreshUrl{
+    NSURL *reqUrl = [NSURL URLWithString:self.reqUrlStr];
+    if (YCDefSysVersion_IOS12_After) {
+        
+    }else {
+        
+    }
+    [self.webView loadRequest:[NSURLRequest requestWithURL:reqUrl]];
+}
 #pragma mark YCJSinterationPro
 - (void)catchJSContextMethod:(JSContext *)jsc{
     NSString *indentifier = [NSString stringWithFormat:@"indentifier%lud", (unsigned long)self.webView.hash];
 //    NSString *indentifierJS = [NSString stringWithFormat:@"var %@ = '%@'", indentifier, indentifier];
 //    //oc调用js的函数？
 //    [self.webView stringByEvaluatingJavaScriptFromString:indentifierJS];
-    //判断这个context是否属于当前这个webView
-    if (![jsc[indentifier].toString isEqualToString:indentifier]) return;
+//    //判断这个context是否属于当前这个webView
+//    if (![jsc[indentifier].toString isEqualToString:indentifier]) return;
     _jsContext = jsc;     //如果属于这个webView
     jsc[NSStringFromClass([self class])] = self;    //将对象注入这个context中
 }

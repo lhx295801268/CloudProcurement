@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_Lunch.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWD-sH-7Zw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_Launch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gWD-sH-7Zw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="temp_Lunch.png" width="416" height="752"/>
+        <image name="temp_Launch.jpg" width="750" height="1334"/>
     </resources>
 </document>

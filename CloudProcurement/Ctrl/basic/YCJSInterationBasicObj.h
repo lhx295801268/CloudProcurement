@@ -35,8 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)appCtrlJump:(NSString *)ctrlName;
 @end
 
-@interface YCJSInterationBasicObj : NSObject<YCJSinterationPro>
-@property (nonatomic, copy) id<YCJSinterationPro> delegate;
+@interface YCJSInterationBasicObj : NSObject
+@property (nonatomic, weak) id<YCJSinterationPro> delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

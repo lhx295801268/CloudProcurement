@@ -8,7 +8,10 @@
 
 #import "YCTableBarCtrl.h"
 #import "YCSysCtrl.h"
-
+#import "YCLoginCtrl.h"
+#import "YCMainCtrl.h"
+#import "YCClassificationCtrl.h"
+#import "YCOrderCtrl.h"
 #import "UIImageView+WebCache.h"
 @implementation BarBtnItemContentView
 
@@ -79,9 +82,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.barList = @[@[@"Main", @[@"", @""]], @[@"second", @[@"", @""]]].mutableCopy;
-//    self.ctrlList = @[[[YCMainCtrl alloc] initWithFlowName:@"YCMainCtrl"],
-//                      [[YCSecondCtrl alloc] initWithFlowName:@"YCSecondCtrl"]];
+    self.barList = @[@[@"首页", @[@"", @""]], @[@"分类", @[@"", @""]], @[@"订单", @[@"", @""]], @[@"我的", @[@"", @""]]].mutableCopy;
+    self.ctrlList = @[[[YCMainCtrl alloc] initWithFlowName:@"YCMainCtrl"],
+                      [[YCClassificationCtrl alloc] initWithFlowName:@"YCClassificationCtrl"],
+                      [[YCOrderCtrl alloc] initWithFlowName:@"YCOrderCtrl"],
+                      [[YCLoginCtrl alloc] initWithFlowName:@"YCLoginCtrl"]];
     [self initUI];
 }
 

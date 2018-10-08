@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YCWebViewCtrl : YCSysCtrl
-
+@property (nonatomic, copy) NSString *reqUrlStr;
 @end
 
 NS_ASSUME_NONNULL_END

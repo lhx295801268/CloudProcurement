@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NavicationMainCtrl.h"
+#import "YCTableBarCtrl.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    YCTableBarCtrl *ctrl = [[YCTableBarCtrl alloc] init];
+    NavicationMainCtrl *nav = [[NavicationMainCtrl alloc] initWithRootViewController:ctrl];
+    [self.window setRootViewController:nav];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

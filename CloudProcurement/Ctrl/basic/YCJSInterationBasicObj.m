@@ -9,7 +9,7 @@
 #import "YCJSInterationBasicObj.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "YCNotificationNameConfig.h"
-@interface YCJSInterationBasicObj()
+@interface YCJSInterationBasicObj()<YCJSinterationPro>
 @property (nonatomic, strong) JSContext *jsc;
 @end
 

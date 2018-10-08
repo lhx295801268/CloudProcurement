@@ -1,16 +1,16 @@
 //
-//  YCLoginCtrl.h
+//  YCOrderCtrl.h
 //  CloudProcurement
 //
-//  Created by TsunamiLi on 2018/10/7.
+//  Created by TsunamiLi on 2018/10/8.
 //  Copyright © 2018年 TsunamiLi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "YCSysCtrl.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YCLoginCtrl : YCSysCtrl
+@interface YCOrderCtrl : YCSysCtrl
 
 @end
 
