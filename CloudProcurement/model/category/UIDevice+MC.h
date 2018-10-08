@@ -1,8 +1,6 @@
 #import <UIKit/UIKit.h>
-
+#import "YCTypeDefObj.h"
 @interface UIDevice (MC)
-
-
 + (NSString *)deviceModel;
 + (NSString *)deviceResolution;
 + (NSString *)deviceName;
@@ -21,6 +19,7 @@
 
 + (BOOL)isIphoneX;
 +(BOOL)isIphoneXOrLater;
++(YCIphoneType)judgeIphoneType;
 //如果是3.5寸屏
 + (BOOL)isScreen35;
 + (BOOL)isPhone;

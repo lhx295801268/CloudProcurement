@@ -82,7 +82,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.barList = @[@[@"首页", @[@"", @""]], @[@"分类", @[@"", @""]], @[@"订单", @[@"", @""]], @[@"我的", @[@"", @""]]].mutableCopy;
+    self.barList = @[@[@"首页", @[@"tabbar_ic_one_normal", @"tabbar_ic_one_selected"]],
+                              @[@"分类", @[@"tabbar_ic_two_normal", @"tabbar_ic_two_selected"]],
+                              @[@"订单", @[@"tabbar_ic_three_normal", @"tabbar_ic_three_selected"]],
+                              @[@"我的", @[@"tabbar_ic_four_normal", @"tabbar_ic_four_selected"]]].mutableCopy;
     self.ctrlList = @[[[YCMainCtrl alloc] initWithFlowName:@"YCMainCtrl"],
                       [[YCClassificationCtrl alloc] initWithFlowName:@"YCClassificationCtrl"],
                       [[YCOrderCtrl alloc] initWithFlowName:@"YCOrderCtrl"],
@@ -106,10 +109,16 @@
             continue;
         }
         NSString *tempNameStr = [tempList firstObject];
+        NSArray *tempImageList = [tempList lastObject];
         YCSysCtrl *tempCtrl = [self.ctrlList objectAtIndex:pos];
         tempCtrl.title = tempNameStr;
         tempCtrl.tabBarItem.title = tempNameStr;
-//        [tempCtrl.tabBarItem setTitleTextAttributes:nil forState:UIControlStateSelected];
+        [tempCtrl.tabBarItem setTitleTextAttributes:nil forState:UIControlStateSelected];
+        UIImage *normalImage = YCDefImageWithName([tempImageList firstObject]);
+        UIImage *selectedImage = YCDefImageWithName([tempImageList lastObject]);
+        
+        [tempCtrl.tabBarItem setImage:normalImage];
+        [tempCtrl.tabBarItem setSelectedImage:selectedImage];
         tempCtrl.view.tag = pos;
         [tempCtrl setNavCtrl:self.navigationController];
         [self addChildViewController:tempCtrl];
@@ -120,19 +129,5 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
 
 }
-//
-//- (void)tabBarController:(UITabBarController *)tabBarController willBeginCustomizingViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED;
-//- (void)tabBarController:(UITabBarController *)tabBarController willEndCustomizingViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers changed:(BOOL)changed NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED;
-//- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers changed:(BOOL)changed __TVOS_PROHIBITED;
-//
-//- (UIInterfaceOrientationMask)tabBarControllerSupportedInterfaceOrientations:(UITabBarController *)tabBarController NS_AVAILABLE_IOS(7_0) __TVOS_PROHIBITED;
-//- (UIInterfaceOrientation)tabBarControllerPreferredInterfaceOrientationForPresentation:(UITabBarController *)tabBarController NS_AVAILABLE_IOS(7_0) __TVOS_PROHIBITED;
-//
-//- (nullable id <UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController
-//                               interactionControllerForAnimationController: (id <UIViewControllerAnimatedTransitioning>)animationController NS_AVAILABLE_IOS(7_0);
-//
-//- (nullable id <UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController
-//                     animationControllerForTransitionFromViewController:(UIViewController *)fromVC
-//                                                       toViewController:(UIViewController *)toVC  NS_AVAILABLE_IOS(7_0);
 
 @end

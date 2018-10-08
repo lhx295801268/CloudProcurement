@@ -3,7 +3,6 @@
 #import "spawn.h"
 #include <sys/param.h>
 #include <sys/mount.h>
-
 @implementation UIDevice (MC)
 
 + (NSString *)deviceResolution
@@ -118,8 +117,10 @@ static const char * __jb_app = NULL;
 {
     return [self isScreenSize:CGSizeMake(1125, 2436)];
 }
-#warning add by lhx 20181007 判断等待后面添加
 +(BOOL)isIphoneXOrLater{
+    if ([self judgeIphoneType] >= kYCIphoneTypeForX) {
+        return YES;
+    }
     return NO;
 }
 
@@ -205,4 +206,48 @@ static const char * __jb_app = NULL;
     return freespace;
 }
 
++(YCIphoneType)judgeIphoneType{
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    if ([platform isEqualToString:@"iPhone3,1"] || [platform isEqualToString:@"iPhone3,2"] || [platform isEqualToString:@"iPhone3,3"]) {
+        return kYCIphoneTypeFor4;
+    }else if([platform isEqualToString:@"iPhone4,1"]){
+        return kYCIphoneTypeFor4S;
+    }else if([platform isEqualToString:@"iPhone5,1"] || [platform isEqualToString:@"iPhone5,2"]){
+        return kYCIphoneTypeFor5;
+    }else if([platform isEqualToString:@"iPhone5,3"] || [platform isEqualToString:@"iPhone5,4"]){
+        return kYCIphoneTypeFor5C;
+    }else if([platform isEqualToString:@"iPhone6,1"] || [platform isEqualToString:@"iPhone6,2"]){
+        return kYCIphoneTypeFor5S;
+    }else if([platform isEqualToString:@"iPhone7,2"]){
+        return kYCIphoneTypeFor6;
+    }else if([platform isEqualToString:@"iPhone7,1"]){
+        return kYCIphoneTypeFor6P;
+    }else if([platform isEqualToString:@"iPhone8,1"]){
+        return kYCIphoneTypeFor6S;
+    }else if([platform isEqualToString:@"iPhone8,2"]){
+        return kYCIphoneTypeFor6SP;
+    }else if([platform isEqualToString:@"iPhone8,4"]){
+        return kYCIphoneTypeForSE;
+    }else if([platform isEqualToString:@"iPhone9,1"] || [platform isEqualToString:@"iPhone9,3"]){
+        return kYCIphoneTypeFor7;
+    }else if([platform isEqualToString:@"iPhone9,2"] || [platform isEqualToString:@"iPhone9,4"]){
+        return kYCIphoneTypeFor7P;
+    }else if([platform isEqualToString:@"iPhone10,1"] || [platform isEqualToString:@"iPhone10,4"]){
+        return kYCIphoneTypeFor8;
+    }else if([platform isEqualToString:@"iPhone10,2"] || [platform isEqualToString:@"iPhone10,5"]){
+        return kYCIphoneTypeFor8P;
+    }else if([platform isEqualToString:@"iPhone10,3"] || [platform isEqualToString:@"iPhone10,6"]){
+        return kYCIphoneTypeForX;
+    }else if([platform isEqualToString:@"iPhone11,8"]){
+        return kYCIphoneTypeForXR;
+    }else if([platform isEqualToString:@"iPhone11,2"]){
+        return kYCIphoneTypeForXS;
+    }else if([platform isEqualToString:@"iPhone11,6"]){
+        return kYCIphoneTypeForXSM;
+    }else{
+        return kYCIphoneTypeForNormal;
+    }
+}
 @end

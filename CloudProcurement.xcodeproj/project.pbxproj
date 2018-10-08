@@ -14,6 +14,10 @@
 		69ACB0F9216AF5460000518D /* YCMainCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB0F8216AF5460000518D /* YCMainCtrl.m */; };
 		69ACB0FC216AF5870000518D /* YCClassificationCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB0FB216AF5870000518D /* YCClassificationCtrl.m */; };
 		69ACB0FF216AF5A10000518D /* YCOrderCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB0FE216AF5A10000518D /* YCOrderCtrl.m */; };
+		69ACB102216B236B0000518D /* UIColor+YCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB101216B236B0000518D /* UIColor+YCColor.m */; };
+		69ACB107216B34930000518D /* YCRegistCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB106216B34930000518D /* YCRegistCtrl.m */; };
+		69ACB10A216B34C30000518D /* YCResetPwdCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB109216B34C30000518D /* YCResetPwdCtrl.m */; };
+		69ACB10D216B34E10000518D /* YCResetPwd2Ctrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB10C216B34E10000518D /* YCResetPwd2Ctrl.m */; };
 		69F6DC97215F253E00C85550 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DC96215F253E00C85550 /* AppDelegate.m */; };
 		69F6DC9D215F253E00C85550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F6DC9B215F253E00C85550 /* Main.storyboard */; };
 		69F6DCA0215F253E00C85550 /* CloudProcurement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69F6DC9E215F253E00C85550 /* CloudProcurement.xcdatamodeld */; };
@@ -69,6 +73,14 @@
 		69ACB0FB216AF5870000518D /* YCClassificationCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCClassificationCtrl.m; sourceTree = "<group>"; };
 		69ACB0FD216AF5A10000518D /* YCOrderCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCOrderCtrl.h; sourceTree = "<group>"; };
 		69ACB0FE216AF5A10000518D /* YCOrderCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCOrderCtrl.m; sourceTree = "<group>"; };
+		69ACB100216B236B0000518D /* UIColor+YCColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+YCColor.h"; sourceTree = "<group>"; };
+		69ACB101216B236B0000518D /* UIColor+YCColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YCColor.m"; sourceTree = "<group>"; };
+		69ACB105216B34930000518D /* YCRegistCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCRegistCtrl.h; sourceTree = "<group>"; };
+		69ACB106216B34930000518D /* YCRegistCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCRegistCtrl.m; sourceTree = "<group>"; };
+		69ACB108216B34C30000518D /* YCResetPwdCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCResetPwdCtrl.h; sourceTree = "<group>"; };
+		69ACB109216B34C30000518D /* YCResetPwdCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCResetPwdCtrl.m; sourceTree = "<group>"; };
+		69ACB10B216B34E10000518D /* YCResetPwd2Ctrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCResetPwd2Ctrl.h; sourceTree = "<group>"; };
+		69ACB10C216B34E10000518D /* YCResetPwd2Ctrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCResetPwd2Ctrl.m; sourceTree = "<group>"; };
 		69F6DC92215F253E00C85550 /* CloudProcurement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudProcurement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F6DC95215F253E00C85550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69F6DC96215F253E00C85550 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +177,12 @@
 			children = (
 				6915F1622169EA4F00797FC0 /* YCLoginCtrl.h */,
 				6915F1632169EA4F00797FC0 /* YCLoginCtrl.m */,
+				69ACB105216B34930000518D /* YCRegistCtrl.h */,
+				69ACB106216B34930000518D /* YCRegistCtrl.m */,
+				69ACB108216B34C30000518D /* YCResetPwdCtrl.h */,
+				69ACB109216B34C30000518D /* YCResetPwdCtrl.m */,
+				69ACB10B216B34E10000518D /* YCResetPwd2Ctrl.h */,
+				69ACB10C216B34E10000518D /* YCResetPwd2Ctrl.m */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -202,6 +220,13 @@
 				69ACB0FE216AF5A10000518D /* YCOrderCtrl.m */,
 			);
 			path = orderCtrl;
+			sourceTree = "<group>";
+		};
+		69ACB10E216B35940000518D /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		69F6DC89215F253E00C85550 = {
@@ -265,6 +290,7 @@
 		69F6DCCB215F653400C85550 /* basic */ = {
 			isa = PBXGroup;
 			children = (
+				69ACB10E216B35940000518D /* view */,
 				69F6DCD0215F653400C85550 /* YCSysCtrl.h */,
 				69F6DCCD215F653400C85550 /* YCSysCtrl.m */,
 				69F6DCFD215F691500C85550 /* YCJSInterationBasicObj.h */,
@@ -299,8 +325,6 @@
 		69F6DCD4215F653400C85550 /* Obj */ = {
 			isa = PBXGroup;
 			children = (
-				6915F1552169BA1200797FC0 /* UIDevice+MC.h */,
-				6915F1542169BA1200797FC0 /* UIDevice+MC.m */,
 				69F6DCDF215F653400C85550 /* YCListObj.h */,
 				69F6DCDA215F653400C85550 /* YCListObj.m */,
 				69F6DCD9215F653400C85550 /* YCTypeDefObj.h */,
@@ -353,8 +377,12 @@
 		69F6DD03215F848D00C85550 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				6915F1552169BA1200797FC0 /* UIDevice+MC.h */,
+				6915F1542169BA1200797FC0 /* UIDevice+MC.m */,
 				69F6DD04215F84D100C85550 /* NSObject+JSInteration.h */,
 				69F6DD05215F84D100C85550 /* NSObject+JSInteration.m */,
+				69ACB100216B236B0000518D /* UIColor+YCColor.h */,
+				69ACB101216B236B0000518D /* UIColor+YCColor.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -563,17 +591,21 @@
 				69F6DCF8215F653400C85550 /* YCHttpRequest.m in Sources */,
 				69F6DCF4215F653400C85550 /* YCListObj.m in Sources */,
 				69F6DD02215F6D2500C85550 /* YCWebViewCtrl.m in Sources */,
+				69ACB107216B34930000518D /* YCRegistCtrl.m in Sources */,
 				69ACB0F9216AF5460000518D /* YCMainCtrl.m in Sources */,
 				69F6DCF2215F653400C85550 /* YCUserManager.m in Sources */,
 				69ACB0FF216AF5A10000518D /* YCOrderCtrl.m in Sources */,
 				69F6DCF6215F653400C85550 /* YCUploadFileItem.m in Sources */,
 				6915F1642169EA4F00797FC0 /* YCLoginCtrl.m in Sources */,
+				69ACB10A216B34C30000518D /* YCResetPwdCtrl.m in Sources */,
+				69ACB10D216B34E10000518D /* YCResetPwd2Ctrl.m in Sources */,
 				69F6DCA0215F253E00C85550 /* CloudProcurement.xcdatamodeld in Sources */,
 				69F6DCFF215F691500C85550 /* YCJSInterationBasicObj.m in Sources */,
 				6915F1562169BA1200797FC0 /* UIDevice+MC.m in Sources */,
 				69F6DCF5215F653400C85550 /* YCUserInfo.m in Sources */,
 				69ACB0FC216AF5870000518D /* YCClassificationCtrl.m in Sources */,
 				69F6DCF0215F653400C85550 /* YCTableBarCtrl.m in Sources */,
+				69ACB102216B236B0000518D /* UIColor+YCColor.m in Sources */,
 				69F6DCEE215F653400C85550 /* YCSysCtrl.m in Sources */,
 				69F6DCA8215F254000C85550 /* main.m in Sources */,
 				69F6DC97215F253E00C85550 /* AppDelegate.m in Sources */,

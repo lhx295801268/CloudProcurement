@@ -7,9 +7,16 @@
 //
 
 #import "YCLoginCtrl.h"
+#import "YCTypeDefObj.h"
+#import "UIDevice+MC.h"
 @interface YCLoginCtrl ()
+//关闭
+@property (nonatomic, strong) UIImageView *backImageView;
+@property (nonatomic, strong)UIImageView *iconImageView;
 @property (nonatomic, strong) UITextField *uNTextField;
 @property (nonatomic, strong) UITextField *pwdTextField;
+@property (nonatomic, strong) UILabel *registTipsLabel;
+@property (nonatomic, strong) UIButton *loginBtn;
 @end
 
 @implementation YCLoginCtrl
@@ -23,6 +30,12 @@
 }
 
 - (void)initUI{
+    UIImageView *backImageView = [UIImageView newAutoLayoutView];
+    _backImageView = backImageView;
+    [backImageView setImage:YCDefImageWithName(@"close")];
+    [self.view addSubview:backImageView];
+    [backImageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:(YCDefStatusBarHeight+13)];
+    
     UIView *accountContentView = [UIView newAutoLayoutView];
     [self.view addSubview:accountContentView];
     [accountContentView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:100];
