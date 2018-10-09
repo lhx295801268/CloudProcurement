@@ -61,8 +61,7 @@
     [contentView autoSetDimensionsToSize:CGSizeMake(YCDefScreenWidth, YCDefScreenHeight - YCDefNavTitleViewHeight)];
     [contentView autoPinEdgesToSuperviewEdges];
     
-    UITextField *phoneNumberTextField =[self createTextField:@"手机号"];
-    _phoneNumberTextField = phoneNumberTextField;
+    UIView *phoneNumberTextField =[self createItemContentView:@"手机号"];
     [contentView addSubview:phoneNumberTextField];
     phoneNumberTextField.backgroundColor = [UIColor ycWhiteColor];
     [phoneNumberTextField autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:(15)];
@@ -87,14 +86,12 @@
     [sendCodeLabel autoSetDimensionsToSize:CGSizeMake(103, 39)];
     [sendCodeLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeLeft];
     
-    UITextField *verifyCodeTextField = [self createTextField:@"验证码"];
-    _verifyCodeTextField = verifyCodeTextField;
+    UIView *verifyCodeTextField = [self createItemContentView:@"验证码"];
     [secondContentView addSubview:verifyCodeTextField];
     [verifyCodeTextField autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeRight];
     [verifyCodeTextField autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:sendCodeLabel withOffset:10];
     
-    UITextField *setPwdTextField = [self createTextField:@"设置密码"];
-    _setPwdTextField = setPwdTextField;
+    UIView *setPwdTextField = [self createItemContentView:@"设置密码"];
     [self.view addSubview:setPwdTextField];
     [setPwdTextField autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:secondContentView withOffset:15];
     [setPwdTextField autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:phoneNumberTextField];
@@ -102,8 +99,7 @@
     [setPwdTextField autoSetDimension:ALDimensionHeight toSize:38];
     [setPwdTextField autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:phoneNumberTextField];
     
-    UITextField *againPwdTextField = [self createTextField:@"确认密码"];
-    _againPwdTextField = againPwdTextField;
+    UIView *againPwdTextField = [self createItemContentView:@"确认密码"];
     [self.view addSubview:againPwdTextField];
     [againPwdTextField autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setPwdTextField withOffset:15];
     [againPwdTextField autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:phoneNumberTextField];
@@ -111,8 +107,7 @@
     [againPwdTextField autoSetDimension:ALDimensionHeight toSize:38];
     [againPwdTextField autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:phoneNumberTextField];
     
-    UITextField *companyNameTextField = [self createTextField:@"企业名称"];
-    _companyNameTextField = companyNameTextField;
+    UIView *companyNameTextField = [self createItemContentView:@"企业名称"];
     [self.view addSubview:companyNameTextField];
     [companyNameTextField autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:againPwdTextField withOffset:15];
     [companyNameTextField autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:phoneNumberTextField];
@@ -128,14 +123,37 @@
     [registBtn autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:phoneNumberTextField];
     [registBtn autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:phoneNumberTextField];
     [registBtn autoSetDimension:ALDimensionHeight toSize:40];
-    
-    setPwdTextField.secureTextEntry = YES;
-    againPwdTextField.secureTextEntry = YES;
     @weakify(self);
     [NSLayoutConstraint autoSetPriority:UILayoutPriorityRequired forConstraints:^{
         [self_weak_.sendCodeLabel autoSetContentHuggingPriorityForAxis:ALAxisHorizontal];
         [self_weak_.sendCodeLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
     }];
+}
+
+- (UIView *)createItemContentView:(NSString *)placeHolderStr{
+    UIView *itemContentView = [UIView newAutoLayoutView];
+    itemContentView.backgroundColor = [UIColor ycWhiteColor];
+    
+    UITextField *tempTextField = [self createTextField:placeHolderStr];
+    if ([placeHolderStr isEqualToString:@"手机号"]) {
+        _phoneNumberTextField = tempTextField;
+    }else if ([placeHolderStr isEqualToString:@"验证码"]) {
+        _verifyCodeTextField = tempTextField;
+    }else if ([placeHolderStr isEqualToString:@"设置密码"]) {
+        _setPwdTextField = tempTextField;
+        tempTextField.secureTextEntry = YES;
+    }else if ([placeHolderStr isEqualToString:@"确认密码"]) {
+        _againPwdTextField = tempTextField;
+        tempTextField.secureTextEntry = YES;
+    }else if ([placeHolderStr isEqualToString:@"企业名称"]) {
+        _companyNameTextField = tempTextField;
+    }
+    [itemContentView addSubview:tempTextField];
+    [tempTextField autoPinEdgeToSuperviewEdge:ALEdgeTop];
+    [tempTextField autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:10];
+    [tempTextField autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [tempTextField autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:10];
+    return itemContentView;
 }
 
 - (UITextField *)createTextField:(NSString *)placeHolder{
