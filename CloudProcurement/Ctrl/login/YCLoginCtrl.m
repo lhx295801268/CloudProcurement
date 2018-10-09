@@ -201,7 +201,7 @@
 }
 
 - (void)clickForgotPwdMethod{
-    YCResetPwdCtrl *ctrl = [[YCResetPwdCtrl alloc] initWithFlowName:nil];
+    YCResetPwdCtrl *ctrl = [[YCResetPwdCtrl alloc] initWithFlowName:YCDefResetPwdFlowName];
     [self gotoNextCtrl:ctrl];
 }
 

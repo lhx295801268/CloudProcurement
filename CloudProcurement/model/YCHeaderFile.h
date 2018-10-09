@@ -7,6 +7,8 @@
 //
 #import "YYModel.h"
 #import "YCTypeDefObj.h"
+#import "YCUserManager.h"
+#import "YCFlowNameConfig.h"
 #import "UIDevice+MC.h"
 #import "UIColor+YCColor.h"
 #import "UIView+Expand.h"

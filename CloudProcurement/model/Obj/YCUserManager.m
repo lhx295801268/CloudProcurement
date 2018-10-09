@@ -16,7 +16,7 @@
 @property (nonatomic, assign) BOOL userIsLogined;
 @end
 @implementation YCUserManager
-- (instancetype)shareIns{
++ (instancetype)shareIns{
     static YCUserManager *shareIns;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

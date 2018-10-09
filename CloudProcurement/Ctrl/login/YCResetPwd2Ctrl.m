@@ -109,6 +109,7 @@
     //跳转下一步
 #warning add by lhx 保存、修改密码请求
     NSLog(@"保存密码：%@", NSStringFromClass([self class]));
+    [self popCtrl4FlowName:YCDefResetPwdFlowName];
 }
 #pragma mark textField change rac
 - (void)textFeledChange:(NSNotification *)notification{

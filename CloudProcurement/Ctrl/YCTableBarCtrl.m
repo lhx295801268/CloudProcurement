@@ -8,7 +8,8 @@
 
 #import "YCTableBarCtrl.h"
 #import "YCSysCtrl.h"
-#import "YCLoginCtrl.h"
+//#import "YCLoginCtrl.h"
+#import "YCMineCtrl.h"
 #import "YCMainCtrl.h"
 #import "YCClassificationCtrl.h"
 #import "YCOrderCtrl.h"
@@ -82,14 +83,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.barList = @[@[@"首页", @[@"tabbar_ic_one_normal", @"tabbar_ic_one_selected"]],
-                              @[@"分类", @[@"tabbar_ic_two_normal", @"tabbar_ic_two_selected"]],
-                              @[@"订单", @[@"tabbar_ic_three_normal", @"tabbar_ic_three_selected"]],
-                              @[@"我的", @[@"tabbar_ic_four_normal", @"tabbar_ic_four_selected"]]].mutableCopy;
+    self.barList = @[@[@"首页", @[@"d_home1", @"d_home11"]],
+                              @[@"分类", @[@"d_type1", @"d_type11"]],
+                              @[@"订单", @[@"d_oder1", @"d_oder11"]],
+                              @[@"我的", @[@"d_my11", @"d_my11"]]].mutableCopy;
     self.ctrlList = @[[[YCMainCtrl alloc] initWithFlowName:@"YCMainCtrl"],
                       [[YCClassificationCtrl alloc] initWithFlowName:@"YCClassificationCtrl"],
                       [[YCOrderCtrl alloc] initWithFlowName:@"YCOrderCtrl"],
-                      [[YCLoginCtrl alloc] initWithFlowName:@"YCLoginCtrl"]];
+                      [[YCMineCtrl alloc] initWithFlowName:@"YCMineCtrl"]];
     [self initUI];
 }
 

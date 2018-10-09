@@ -164,7 +164,7 @@
 
 - (void)clickNextBtn{
     //跳转下一步
-    YCResetPwd2Ctrl *ctrl = [[YCResetPwd2Ctrl alloc] initWithFlowName:nil];
+    YCResetPwd2Ctrl *ctrl = [[YCResetPwd2Ctrl alloc] initWithFlowName:YCDefResetPwdFlowName];
     [self gotoNextCtrl:ctrl];
 }
 #pragma mark textField change rac

@@ -22,9 +22,14 @@
     }
     return self;
 }
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    _isAppear = NO;
+}
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    _isAppear = YES;
     if(nil != self.navCtrl){
 //        NSLog(@"当前%@标题栏位控制状态%@", NSStringFromClass([self class]), @(self.navationbarHidden));
         [self.navCtrl setNavigationBarHidden:self.navationbarHidden animated:NO];
@@ -46,9 +51,14 @@
     }
 }
 - (UIButton *)createBackBtn{
-    UIButton *backBtn = [UIButton newAutoLayoutView];
-    [backBtn setTitle:@"返 回" forState:UIControlStateNormal];
-    backBtn.backgroundColor = [UIColor ycRed1Color];
+    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
+    backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+//    [backBtn setTitle:@"返 回" forState:UIControlStateNormal];
+    UIImage* sourceImage = YCDefImageWithName(@"back");
+//    UIImage* flippedImage = [UIImage imageWithCGImage:sourceImage.CGImage
+//                                                scale:sourceImage.scale
+//                                          orientation:UIImageOrientationUpMirrored];
+    [backBtn setImage:sourceImage forState:UIControlStateNormal];
     return backBtn;
 }
 -(void)setFlowName:(NSString *)flowName{
@@ -87,6 +97,11 @@
 //    先跳转在进行移除操作
     [self gotoNextCtrl:desCtrl];
     [self clearFlow:flowList];
+}
+
+-(void)popCtrl4FlowName:(NSString *)flowName{
+    if(flowName.length <= 0) return;
+    [self clearFlow:@[flowName]];
 }
 
 -(void)createNavigationCtrl{
@@ -138,6 +153,8 @@
 
 - (void)dealloc{
     NSLog(@"控制界面释放：%@", NSStringFromClass([self class]));
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    _isAppear = NO;
 }
 
 /**
@@ -154,11 +171,23 @@
                 YCSysCtrl *tempCtrl = (YCSysCtrl *)ctrl;
                 if ([flowName isEqualToString: tempCtrl.flowName]) {
                     [willDeleteCtrl addObject:tempCtrl];
-                    [tempCtrl removeFromParentViewController];
+                    if (self.isAppear) {
+                        [self.navCtrl popViewControllerAnimated:NO];
+                    }
                 }
             }
         }
     }
+    for (UIViewController *tempCtrl in willDeleteCtrl) {
+        if (self.isAppear) {
+            [self.navCtrl popViewControllerAnimated:NO];
+        }
+        [tempCtrl removeFromParentViewController];
+    }
     [[curCtrlList mutableCopy] removeObjectsInArray:willDeleteCtrl];
+}
+
+- (void)popToRootCtrl{
+    [self.navCtrl popToRootViewControllerAnimated:YES];
 }
 @end

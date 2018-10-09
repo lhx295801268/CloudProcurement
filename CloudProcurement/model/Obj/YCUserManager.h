@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  用户管理类
  */
 @interface YCUserManager : NSObject
-- (instancetype)shareIns;
++ (instancetype)shareIns;
 #pragma mark login method
 
 /**
