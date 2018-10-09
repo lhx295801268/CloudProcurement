@@ -9,6 +9,7 @@
 #import "YCSysCtrl.h"
 @interface YCSysCtrl ()
 @property (nonatomic, weak)UINavigationController *navCtrl;
+@property (nonatomic, strong) UIButton *backBtn;
 @end
 
 @implementation YCSysCtrl
@@ -31,6 +32,24 @@
         [self setNavCtrl:(UINavigationController *)[UIApplication sharedApplication].delegate.window.rootViewController];
        [self.navCtrl setNavigationBarHidden:self.navationbarHidden animated:NO];
     }
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    if (nil == self.backBtn) {
+        self.backBtn = [self createBackBtn];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backBtn];
+        [self.backBtn addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
+    }
+}
+- (void)onBack{
+    if (nil != self.navCtrl) {
+        [self.navCtrl popViewControllerAnimated:YES];
+    }
+}
+- (UIButton *)createBackBtn{
+    UIButton *backBtn = [UIButton newAutoLayoutView];
+    [backBtn setTitle:@"返 回" forState:UIControlStateNormal];
+    backBtn.backgroundColor = [UIColor ycRed1Color];
+    return backBtn;
 }
 -(void)setFlowName:(NSString *)flowName{
     if((nil == flowName) || (flowName.length <= 0)) {
@@ -119,10 +138,6 @@
 
 - (void)dealloc{
     NSLog(@"控制界面释放：%@", NSStringFromClass([self class]));
-}
-
-- (void)onBack{
-    [self.navCtrl popViewControllerAnimated:YES];
 }
 
 /**
