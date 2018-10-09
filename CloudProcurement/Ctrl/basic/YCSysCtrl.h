@@ -9,13 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "ReactiveObjC.h"
 #import "PureLayout.h"
-#import "YYModel.h"
-#import "YCTypeDefObj.h"
-
-NS_ASSUME_NONNULL_BEGIN
+#import "YCHeaderFile.h"
 @interface YCSysCtrl : UIViewController
 @property(nonatomic, copy, readonly) NSString *flowName;
 @property(nonatomic, assign) BOOL navationbarHidden;
+@property (nonatomic, copy) NSString *titleStr;
 -(instancetype)initWithFlowName:(NSString *)flowName;
 -(void)setFlowName:(NSString *)flowName;
 - (void)setNavCtrl:(UINavigationController *)navCtrl;
@@ -38,4 +36,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)onBack;
 @end
-NS_ASSUME_NONNULL_END

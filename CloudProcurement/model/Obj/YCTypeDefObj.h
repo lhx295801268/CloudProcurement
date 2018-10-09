@@ -8,6 +8,7 @@
 #define __stringif(x) @#x
 #define YCDefIphoneXLaterBottomHeight ((![UIDevice+MC isIphoneXOrLater]) ? (0) : (34))
 #define YCDefStatusBarHeight ((![UIDevice isIphoneXOrLater]) ? (20) : (44))
+#define YCDefNavTitleViewHeight ((![UIDevice isIphoneXOrLater]) ? (64) : (104))
 
 #define YCDefScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define YCDefScreenHeight ([UIScreen mainScreen].bounds.size.height)

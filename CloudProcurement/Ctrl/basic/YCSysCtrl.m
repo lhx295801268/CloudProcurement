@@ -25,7 +25,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if(nil != self.navCtrl){
-        NSLog(@"当前%@标题栏位控制状态%@", NSStringFromClass([self class]), @(self.navationbarHidden));
+//        NSLog(@"当前%@标题栏位控制状态%@", NSStringFromClass([self class]), @(self.navationbarHidden));
         [self.navCtrl setNavigationBarHidden:self.navationbarHidden animated:NO];
     }else{
         [self setNavCtrl:(UINavigationController *)[UIApplication sharedApplication].delegate.window.rootViewController];
@@ -41,6 +41,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    @weakify(self);
+    [RACObserve(self, titleStr) subscribeNext:^(NSString *  _Nullable x) {
+        if (nil != self_weak_.navCtrl) {
+            //标题设置
+            self_weak_.navCtrl.navigationBar.titleTextAttributes =@{NSStrokeColorAttributeName:[UIColor blackColor],NSForegroundColorAttributeName:[UIColor blackColor]};
+            [self_weak_.navCtrl setTitle:x];
+        }
+    }];
 }
 - (void)gotoNextCtrl:(YCSysCtrl *)desCtrl{
     if (nil == desCtrl) {

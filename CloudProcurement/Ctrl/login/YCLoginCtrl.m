@@ -9,7 +9,10 @@
 #import "YCLoginCtrl.h"
 #import "YCTypeDefObj.h"
 #import "UIDevice+MC.h"
-#import "UIColor+YCColor.h"
+#import "YCCircleBeadBtn.h"
+
+#import "YCResetPwdCtrl.h"
+#import "YCRegistCtrl.h"
 @interface YCLoginCtrl ()<UITextFieldDelegate>
 //关闭
 @property (nonatomic, strong) UIImageView *backImageView;
@@ -70,6 +73,7 @@
     self.uNTextField.attributedPlaceholder = phAttrStr;
     self.uNTextField.textColor = [UIColor ycDeepGrayColor];
     self.uNTextField.font = [UIFont systemFontOfSize:16];
+    self.uNTextField.returnKeyType = UIReturnKeyDone;
     [contentView addSubview:self.uNTextField];
     [self.uNTextField autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [self.uNTextField autoPinEdgeToSuperviewEdge:ALEdgeLeft];
@@ -96,6 +100,7 @@
     [pwdContentView addSubview:pwdTextField];
     _pwdTextField = pwdTextField;
     pwdTextField.textColor = [UIColor ycDeepGrayColor];
+    pwdTextField.returnKeyType = UIReturnKeyDone;
     NSString *tempPwdStr = @"密码";
     pwdTextField.secureTextEntry = YES;
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:tempPwdStr attributes:tempDic];
@@ -123,17 +128,11 @@
     [bottomLineView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [bottomLineView autoPinEdgeToSuperviewEdge:ALEdgeRight];
     
-    UIButton *loginBtn = [UIButton newAutoLayoutView];
+    UIButton *loginBtn = [YCCircleBeadBtn createBtnWithAttr:nil enableBgColor:nil title:@"登陆" cr:20.f];
     [self.view addSubview:loginBtn];
     _loginBtn = loginBtn;
-    loginBtn.layer.cornerRadius = 20;
-    loginBtn.layer.masksToBounds = YES;
-    [loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
     [loginBtn setTitleColor:[UIColor ycWhiteColor] forState:UIControlStateNormal];
-//    122,225,227
-    UIColor *bgColor = [UIColor colorWithRed:122.f/255 green:225.f/255 blue:227.f/255 alpha:0.5];
     loginBtn.enabled = false;
-    [loginBtn setBackgroundColor:bgColor];
     [loginBtn autoSetDimension:ALDimensionHeight toSize:40];
     [loginBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:contentView withOffset:30];
     [loginBtn autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:25];
@@ -164,6 +163,9 @@
     [mustRegistLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [mustRegistLabel autoPinEdgeToSuperviewEdge:ALEdgeRight];
     
+    pwdTextField.delegate = self;
+    self.uNTextField.delegate = self;
+    
     @weakify(self);
     [NSLayoutConstraint autoSetPriority:UILayoutPriorityRequired forConstraints:^{
         [self_weak_.forgotPwdTipsLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
@@ -186,10 +188,6 @@
     
     self.pwdTextField.delegate = self;
     self.uNTextField.delegate = self;
-    @weakify(self);
-    [RACObserve(self, loginBtn.enabled) subscribeNext:^(id  _Nullable x) {
-        self_weak_.loginBtn.backgroundColor = ([x boolValue]) ? ([UIColor ycGreen1Color]) : ([UIColor colorWithRed:122.f/255 green:225.f/255 blue:227.f/255 alpha:0.5]);
-    }];
 }
 
 - (void)hiddenKeyboard{
@@ -198,14 +196,26 @@
 }
 
 - (void)clickRegistMethod{
-    
+    YCRegistCtrl *ctrl = [[YCRegistCtrl alloc] initWithFlowName:nil];
+    [self gotoNextCtrl:ctrl];
 }
 
 - (void)clickForgotPwdMethod{
-    
+    YCResetPwdCtrl *ctrl = [[YCResetPwdCtrl alloc] initWithFlowName:nil];
+    [self gotoNextCtrl:ctrl];
 }
 
 - (void)textFieldChange:(NSNotification *)notification{
-//    NSConcreteNotification 0x600000bbf4e0 {name = UITextFieldTextDidChangeNotification; object = <UITextField: 0x7feb3187cc00; frame = (0 0; 265.5 55); text = 'r'; opaque = NO; gestureRecognizers = <NSArray: 0x600000b44b10>; layer = <CALayer: 0x60000054fe80>>}
+    if (self.uNTextField.text.length > 0 && self.pwdTextField.text.length > 0) {
+        self.loginBtn.enabled = YES;
+    }else{
+        self.loginBtn.enabled = NO;
+    }
+}
+
+#pragma mark UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

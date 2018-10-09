@@ -10,6 +10,9 @@
 		6915F1562169BA1200797FC0 /* UIDevice+MC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915F1542169BA1200797FC0 /* UIDevice+MC.m */; };
 		6915F1592169D84400797FC0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6915F1582169D84400797FC0 /* Security.framework */; };
 		6915F1642169EA4F00797FC0 /* YCLoginCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915F1632169EA4F00797FC0 /* YCLoginCtrl.m */; };
+		69A22DB1216C4253003D6AC5 /* YCCircleBeadBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A22DB0216C4253003D6AC5 /* YCCircleBeadBtn.m */; };
+		69A22DB4216C518B003D6AC5 /* UIView+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A22DB3216C518B003D6AC5 /* UIView+Expand.m */; };
+		69A22DB9216C7135003D6AC5 /* YCTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A22DB8216C7135003D6AC5 /* YCTitleView.m */; };
 		69ACB0F3216AF4730000518D /* temp_Launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 69ACB0F2216AF4730000518D /* temp_Launch.jpg */; };
 		69ACB0F9216AF5460000518D /* YCMainCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB0F8216AF5460000518D /* YCMainCtrl.m */; };
 		69ACB0FC216AF5870000518D /* YCClassificationCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ACB0FB216AF5870000518D /* YCClassificationCtrl.m */; };
@@ -66,6 +69,13 @@
 		6915F1582169D84400797FC0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6915F1622169EA4F00797FC0 /* YCLoginCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCLoginCtrl.h; sourceTree = "<group>"; };
 		6915F1632169EA4F00797FC0 /* YCLoginCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCLoginCtrl.m; sourceTree = "<group>"; };
+		69A22DAF216C4253003D6AC5 /* YCCircleBeadBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCCircleBeadBtn.h; sourceTree = "<group>"; };
+		69A22DB0216C4253003D6AC5 /* YCCircleBeadBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCCircleBeadBtn.m; sourceTree = "<group>"; };
+		69A22DB2216C518B003D6AC5 /* UIView+Expand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Expand.h"; sourceTree = "<group>"; };
+		69A22DB3216C518B003D6AC5 /* UIView+Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Expand.m"; sourceTree = "<group>"; };
+		69A22DB7216C7135003D6AC5 /* YCTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCTitleView.h; sourceTree = "<group>"; };
+		69A22DB8216C7135003D6AC5 /* YCTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCTitleView.m; sourceTree = "<group>"; };
+		69A22DBA216C7376003D6AC5 /* YCHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCHeaderFile.h; sourceTree = "<group>"; };
 		69ACB0F2216AF4730000518D /* temp_Launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = temp_Launch.jpg; sourceTree = "<group>"; };
 		69ACB0F7216AF5460000518D /* YCMainCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCMainCtrl.h; sourceTree = "<group>"; };
 		69ACB0F8216AF5460000518D /* YCMainCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCMainCtrl.m; sourceTree = "<group>"; };
@@ -175,6 +185,7 @@
 		6915F15C2169E4B200797FC0 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				69A22DAE216C4203003D6AC5 /* view */,
 				6915F1622169EA4F00797FC0 /* YCLoginCtrl.h */,
 				6915F1632169EA4F00797FC0 /* YCLoginCtrl.m */,
 				69ACB105216B34930000518D /* YCRegistCtrl.h */,
@@ -193,6 +204,15 @@
 				69ACB0F2216AF4730000518D /* temp_Launch.jpg */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		69A22DAE216C4203003D6AC5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				69A22DAF216C4253003D6AC5 /* YCCircleBeadBtn.h */,
+				69A22DB0216C4253003D6AC5 /* YCCircleBeadBtn.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		69ACB0F4216AF4970000518D /* mainCtrl */ = {
@@ -225,6 +245,8 @@
 		69ACB10E216B35940000518D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				69A22DB7216C7135003D6AC5 /* YCTitleView.h */,
+				69A22DB8216C7135003D6AC5 /* YCTitleView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -311,6 +333,7 @@
 				69F6DCE3215F653400C85550 /* FileUploadAndDownload */,
 				69F6DCE6215F653400C85550 /* NetworkProtocol */,
 				69F6DCD4215F653400C85550 /* Obj */,
+				69A22DBA216C7376003D6AC5 /* YCHeaderFile.h */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -383,6 +406,8 @@
 				69F6DD05215F84D100C85550 /* NSObject+JSInteration.m */,
 				69ACB100216B236B0000518D /* UIColor+YCColor.h */,
 				69ACB101216B236B0000518D /* UIColor+YCColor.m */,
+				69A22DB2216C518B003D6AC5 /* UIView+Expand.h */,
+				69A22DB3216C518B003D6AC5 /* UIView+Expand.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -597,6 +622,8 @@
 				69ACB0FF216AF5A10000518D /* YCOrderCtrl.m in Sources */,
 				69F6DCF6215F653400C85550 /* YCUploadFileItem.m in Sources */,
 				6915F1642169EA4F00797FC0 /* YCLoginCtrl.m in Sources */,
+				69A22DB4216C518B003D6AC5 /* UIView+Expand.m in Sources */,
+				69A22DB1216C4253003D6AC5 /* YCCircleBeadBtn.m in Sources */,
 				69ACB10A216B34C30000518D /* YCResetPwdCtrl.m in Sources */,
 				69ACB10D216B34E10000518D /* YCResetPwd2Ctrl.m in Sources */,
 				69F6DCA0215F253E00C85550 /* CloudProcurement.xcdatamodeld in Sources */,
@@ -606,6 +633,7 @@
 				69ACB0FC216AF5870000518D /* YCClassificationCtrl.m in Sources */,
 				69F6DCF0215F653400C85550 /* YCTableBarCtrl.m in Sources */,
 				69ACB102216B236B0000518D /* UIColor+YCColor.m in Sources */,
+				69A22DB9216C7135003D6AC5 /* YCTitleView.m in Sources */,
 				69F6DCEE215F653400C85550 /* YCSysCtrl.m in Sources */,
 				69F6DCA8215F254000C85550 /* main.m in Sources */,
 				69F6DC97215F253E00C85550 /* AppDelegate.m in Sources */,
